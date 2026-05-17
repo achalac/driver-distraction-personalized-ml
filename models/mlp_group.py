@@ -1,22 +1,25 @@
 """
-MLP GROUP MODEL (LOPO) - IEEE-reviewer safe + FAST + Excel outputs (GPU/CPU friendly)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-Fixes the strict-reviewer issues:
-✅ Leave-One-Participant-Out (LOPO): test participant fully held out (no leakage)
-✅ Strict time order (no random sample-level split)
-✅ WINDOW-LEVEL dataset (5s non-overlapping; windows never cross file boundaries)
-✅ Window features = mean within window (simple + transparent baseline)
-✅ Blockwise window validation split (last 10% windows per file)
-✅ Balanced training windows (prevents "always Normal" collapse)
-✅ Threshold tuned ONLY on validation to maximize F1 (not fixed 0.5)
-✅ Metrics: Accuracy, Balanced Accuracy, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrices (counts + normalized %)
-✅ Label-shuffle negative control (shuffle training labels) evaluated on same test windows
-✅ Per-fold Excel + Summary Excel across all folds
-✅ Training/validation loss plot PNG per fold + training history in Excel
-✅ FAST: caches per-file window datasets to disk (reused across folds)
-✅ Visible console progress
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+MLP GROUP MODEL (LOPO) 
 Outputs:
   <project_root>/OUTPUT_MLP_GROUP_LOPO_FAST/
 Cache:

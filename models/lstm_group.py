@@ -1,24 +1,25 @@
 """
-LSTM GROUP MODEL (LOPO) - IEEE Access / Q1 reviewer-safe (BEST version, matching your SLP/SVM structure)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-✅ Leave-One-Participant-Out (LOPO): test participant fully held out (no leakage)
-✅ Strict time-order preserved (no random sample split across time)
-✅ WINDOW-LEVEL dataset (5s, non-overlapping; windows NEVER cross file boundaries)
-✅ LSTM uses RAW window SEQUENCES (not just means):
-      Xw shape = [n_windows, timesteps, n_features]
-✅ Optional downsample inside each window to speed up (default DOWNSAMPLE=4 → 128Hz→32Hz)
-✅ Blockwise validation split at WINDOW level (last 10% windows per file)
-✅ Balanced training windows (equal Normal/Load) to prevent collapse
-✅ Threshold tuned ONLY on validation to maximize F1 (not fixed 0.5)
-✅ Metrics reported (REAL test):
-      accuracy, balanced_accuracy, precision, recall, f1, macro_f1, mcc
-✅ Confusion matrices (counts + normalized %)
-✅ Shuffle negative control (shuffle training labels; lighter epochs)
-✅ Per-fold Excel output + final summary Excel across all folds
-✅ Training/validation loss curve saved PNG + history saved in Excel
-✅ FAST: caches per-file window sequences to disk (NPZ), reused across folds
-✅ Console progress logging (visible)
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+LSTM GROUP MODEL (LOPO) 
 Outputs:
   <project_root>/OUTPUT_LSTM_GROUP_LOPO_BEST/
 Cache:

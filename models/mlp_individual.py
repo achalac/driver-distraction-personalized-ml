@@ -1,21 +1,25 @@
 """
-MLP INDIVIDUAL (Personalised) MODEL - IEEE/Q1 reviewer-safe (FIXED SPLIT)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-Fixes the key issue in the previous script:
-✅ Split within each condition (Normal/Load) BEFORE merging
-   -> prevents single-class test sets
-   -> MCC becomes meaningful and consistent
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
-Keeps your pipeline choices:
-✅ Within-subject temporal split (early train -> later test)
-✅ 5s non-overlapping windows
-✅ Window features = mean (transparent baseline)
-✅ Blockwise validation split (time-respecting) at window level
-✅ Balanced training windows
-✅ Threshold tuned ONLY on validation
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Per-participant Excel + Summary Excel
-✅ Shuffle negative control (optional; included)
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+MLP INDIVIDUAL (Personalised) MODEL  
 """
 
 import os

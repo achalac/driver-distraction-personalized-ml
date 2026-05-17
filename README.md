@@ -35,4 +35,4 @@ Dataset is publicly available at:
 https://doi.org/10.5281/zenodo.20233645
 
 ## License
-MIT License
+CC BY-NC 4.0 

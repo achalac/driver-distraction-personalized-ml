@@ -21,18 +21,6 @@ License: CC BY-NC 4.0
 
 SLP GROUP MODEL (LOPO) 
 
-✅ LOPO participant split (no leakage)
-✅ Window-level dataset (5s) with mean features (transparent)
-✅ Blockwise window validation split (last 10% windows per file)
-✅ Balanced training windows to avoid collapse
-✅ Threshold tuned ONLY on validation
-✅ Metrics (REAL): Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrices (counts + normalized)
-✅ Shuffle negative control (lighter but valid)
-✅ ALL outputs in Excel + loss plot PNG
-✅ FAST: caches window datasets per file to disk, reused across folds
-✅ Logs progress clearly
-
 Outputs:
   <project_root>/OUTPUT_SLP_GROUP_LOPO_FAST/
     - SLP_GROUP_LOPO_excl_XXX.xlsx (one per fold)

@@ -19,7 +19,7 @@ Code: https://github.com/achalac/
 
 License: CC BY-NC 4.0
 
-SLP INDIVIDUAL (Personalised) MODEL - IEEE Access Q1 reviewer-safe (FIXED split)
+SLP INDIVIDUAL (Personalised) MODEL 
 
 ✅ Window-level dataset (5s non-overlapping; windows never cross file boundaries)
 ✅ IMPORTANT FIX: Temporal split is now done at WINDOW level *within each file/condition*:

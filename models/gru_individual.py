@@ -1,34 +1,29 @@
 """
-GRU INDIVIDUAL (Personalised) MODEL - IEEE-reviewer-safe (temporal-aware) + Excel outputs
-======================================================================================
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-This is the INDIVIDUAL (within-subject) model:
-For each participant:
-  - Train on early time segment
-  - Test on later time segment
-(no random shuffling; strict time order)
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
-Temporal + reviewer-safe properties:
-✅ Within-subject temporal split (train early, test later)
-✅ WINDOW-LEVEL SEQUENCE dataset: 5s non-overlapping windows, no crossing file boundaries
-✅ Each window is a sequence [T=640, F=16] (keeps temporal dynamics)
-✅ Block-wise validation split at WINDOW level (last 10% windows per file, inside TRAIN segment)
-✅ Balanced training windows to prevent "always Normal" collapse
-✅ Threshold tuned ONLY on validation to maximize F1
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrix counts + normalized (%)
-✅ Label-shuffle negative control (shuffle training labels) evaluated on same test windows
-✅ Per-participant Excel output + summary Excel across participants + loss plot PNG per participant
-✅ FAST: caches per-file window tensors to disk (shared across runs)
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
 
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+GRU INDIVIDUAL (Personalised) MODEL 
 Outputs:
   <project_root>/OUTPUT_GRU_INDIVIDUAL/
   <project_root>/CACHE_WINDOWS_GRU_INDIVIDUAL/
 
-Assumptions:
-- Files: GAC001_Normal_F.csv, GAC001_Load_F.csv ... GAC050_*.csv
-- Each CSV has >=16 feature columns (usecols=range(16))
-- Normal=0, Load=1
 """
 
 import os

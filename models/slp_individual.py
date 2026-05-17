@@ -21,18 +21,7 @@ License: CC BY-NC 4.0
 
 SLP INDIVIDUAL (Personalised) MODEL 
 
-✅ Window-level dataset (5s non-overlapping; windows never cross file boundaries)
-✅ IMPORTANT FIX: Temporal split is now done at WINDOW level *within each file/condition*:
-   - Normal windows: first X% train, last (1-X)% test
-   - Load windows:   first X% train, last (1-X)% test
-   => ensures BOTH classes appear in train AND test (no {1:N} test pathology)
-✅ Blockwise window validation split (last 10% windows per file, inside TRAIN only)
-✅ Balanced training windows to avoid collapse
-✅ Threshold tuned ONLY on validation (per participant) to maximize F1
-✅ Metrics (REAL + SHUFFLE): Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrices (counts + normalized)
-✅ Shuffle negative control (shuffle training labels) evaluated on same test windows
-✅ Outputs:
+Outputs:
    <project_root>/OUTPUT_SLP_INDIVIDUAL_FIXED/
      - SLP_INDIV_pid_XXX.xlsx
      - LOSS_INDIV_pid_XXX.png

@@ -1,5 +1,25 @@
 """
-SLP GROUP MODEL (LOPO) - IEEE-reviewer safe + faster + visible progress + FULL SUMMARY METRICS
+Driver Distraction Detection using Personalized 
+Machine Learning
+
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
+
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+SLP GROUP MODEL (LOPO) 
 
 ✅ LOPO participant split (no leakage)
 ✅ Window-level dataset (5s) with mean features (transparent)

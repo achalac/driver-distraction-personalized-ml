@@ -1,19 +1,24 @@
 """
-NAIVE BAYES INDIVIDUAL (Personalised) MODEL - IEEE-reviewer-safe + NaN-safe + Excel outputs
-(Matches the SAME metric/output structure as your Group (LOPO) versions)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-✅ Within-subject temporal split (train early time, test later time) - NO random shuffling
-✅ WINDOW-LEVEL dataset (5s non-overlapping; no crossing file boundaries)
-✅ Window features = mean within window (transparent baseline)
-✅ Block-wise validation split at WINDOW level (last 10% windows per file, within TRAIN segment)
-✅ Balanced training windows (avoid "always Normal" collapse)
-✅ Threshold tuned ONLY on validation (maximize F1)
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrix counts + normalized (%)
-✅ Label-shuffle negative control (shuffle training labels, evaluate on same test windows)
-✅ Per-participant Excel + summary Excel across all participants
-✅ Cache per-file window features to disk
-✅ Robust NaN/inf handling via SimpleImputer + drop_nonfinite
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
+
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+NAIVE BAYES INDIVIDUAL (Personalised) MODEL 
 
 Outputs:
   <project_root>/OUTPUT_NB_INDIVIDUAL/

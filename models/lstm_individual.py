@@ -1,24 +1,27 @@
 """
-LSTM INDIVIDUAL (Personalised) MODEL - IEEE Access / Q1 reviewer-safe (FIXED)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-Key fixes vs your current script:
-❌ Removed sample-level temporal split after concatenating Normal+Load
-✅ Added WINDOW-level split WITHIN EACH FILE/CONDITION:
-   - Normal windows: first X% train, last (1-X)% test
-   - Load windows:   first X% train, last (1-X)% test
-   => guarantees both classes appear in test (no {1:N} test_label_dist)
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
-All reviewer-safe properties preserved:
-✅ Window-level SEQUENCE dataset (5s non-overlapping; windows never cross file boundaries)
-✅ LSTM uses full temporal sequence per window (not mean features)
-✅ Block-wise validation split at WINDOW level (last 10% windows per file within TRAIN)
-✅ Balanced training windows (equal Normal/Load) to prevent collapse
-✅ Threshold tuned ONLY on validation (maximize F1)
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrices counts + normalized (%)
-✅ Label-shuffle negative control (shuffle TRAIN labels) evaluated on same test windows
-✅ Per-participant Excel output + Summary Excel across all participants
-✅ Training/validation loss plot PNG per participant + history in Excel
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+LSTM INDIVIDUAL (Personalised) MODEL 
+
+
 """
 
 import os

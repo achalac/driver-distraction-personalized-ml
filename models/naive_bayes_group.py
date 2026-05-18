@@ -1,17 +1,27 @@
 """
-NAIVE BAYES GROUP MODEL (LOPO) - IEEE-reviewer-safe + NaN-safe + Excel outputs
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-✅ LOPO participant split (no leakage)
-✅ WINDOW-LEVEL dataset (5s non-overlapping; no crossing file boundaries)
-✅ Window features = mean within window (transparent)
-✅ Block-wise validation split at WINDOW level (last 10% windows per file)
-✅ Balanced training windows (avoid "always Normal" collapse)
-✅ Threshold tuned ONLY on validation to maximize F1 (uses predict_proba)
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrix counts + normalized (%)
-✅ Label-shuffle negative control
-✅ Per-fold Excel + summary Excel
-✅ Cache per-file window features to disk
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
+
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+NAIVE BAYES GROUP MODEL (LOPO) 
+
+
 
 Outputs:
   <project_root>/OUTPUT_NB_GROUP_LOPO/

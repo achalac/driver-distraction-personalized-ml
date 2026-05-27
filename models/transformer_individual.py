@@ -1,21 +1,27 @@
 """
-TRANSFORMER INDIVIDUAL (Personalised) MODEL - IEEE-reviewer-safe (temporal-aware)
-===============================================================================
+Driver Distraction Detection using Personalized 
+Machine Learning
 
-This is the INDIVIDUAL (within-subject) Transformer model using a temporal split:
-Train on earlier time, Test on later time (no shuffling).
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
 
-Why this satisfies strict IEEE reviewers and is FAIR vs Group:
-✅ Same window definition as group: 5s non-overlapping, no crossing file boundaries
-✅ Same sequence input: [T=640, F=16] per window
-✅ Strict within-subject temporal split (train early, test later)
-✅ Validation is block-wise at WINDOW level inside TRAIN segment
-✅ Balanced training windows (prevents collapse)
-✅ Threshold tuned ONLY on validation
-✅ Metrics: Accuracy, Balanced Acc, Precision, Recall, F1, Macro-F1, MCC
-✅ Confusion matrices (counts + normalized)
-✅ Label-shuffle negative control (shuffle training labels) evaluated on same test windows
-✅ Excel outputs per participant + summary Excel across all participants + loss plot PNG
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+TRANSFORMER INDIVIDUAL (Personalised) MODEL - 
+
+
 
 Outputs:
   <project_root>/OUTPUT_TRANSFORMER_INDIVIDUAL/

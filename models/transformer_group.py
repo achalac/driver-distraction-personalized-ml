@@ -326,7 +326,7 @@ def main():
     os.makedirs(cache_dir, exist_ok=True)
 
     # ----------------------------
-    # ✅ RESUME SETTINGS
+    # RESUME SETTINGS
     # ----------------------------
     START_FOLD = 25                 # <-- resume from participant 25
     END_FOLD = 50                   # <-- last participant
@@ -361,7 +361,7 @@ def main():
 
     summary_rows = []
 
-    # ✅ Loop only the range you want
+    # Loop only the range you want
     for exclude_pid in range(START_FOLD, END_FOLD + 1):
         fold_excel = os.path.join(out_folder, f"TRANSFORMER_GROUP_LOPO_excl_{exclude_pid:03d}.xlsx")
         if SKIP_IF_EXCEL_EXISTS and os.path.exists(fold_excel):
@@ -559,7 +559,7 @@ def main():
 
         elapsed = time.time() - t0
         logging.info(
-            f"✅ Fold {exclude_pid:03d} done in {elapsed/60:.1f} min | "
+            f" Fold {exclude_pid:03d} done in {elapsed/60:.1f} min | "
             f"REAL F1={metrics_main['f1']:.3f} | REAL MCC={metrics_main['mcc']:.3f} | "
             f"SHUFFLE F1={metrics_shuffle['f1']:.3f}"
         )
@@ -589,7 +589,7 @@ def main():
             }
             pd.DataFrame([stats]).to_excel(writer, sheet_name="SummaryStats", index=False)
 
-        logging.info(f"✅ Saved partial-run summary: {summary_path}")
+        logging.info(f" Saved partial-run summary: {summary_path}")
     else:
         logging.info("No new folds were run (everything already existed).")
 

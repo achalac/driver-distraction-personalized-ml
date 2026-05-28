@@ -1,7 +1,25 @@
 """
-TRANSFORMER GROUP MODEL (LOPO) - FIXED, IEEE-reviewer-safe, NaN-safe, Excel outputs
-+ RESUME SUPPORT (start from participant N and/or skip folds already done)
+Driver Distraction Detection using Personalized 
+Machine Learning
 
+Authors: Achala Aponso, Craig Speelman, 
+         Michael N. Johnstone
+Institution: Edith Cowan University, 
+             Joondalup, WA, Australia
+Contact: aaponso@our.ecu.edu.au
+
+Associated Publication:
+"Driver Distraction Detection using Personalized 
+Machine Learning"
+Submitted to IEEE Access, 2026
+
+Dataset: https://doi.org/10.5281/zenodo.20233645
+Code: https://github.com/achalac/
+      driver-distraction-personalized-ml
+
+License: CC BY-NC 4.0
+
+TRANSFORMER GROUP MODEL (LOPO) - 
 Outputs:
   <project_root>/OUTPUT_TRANSFORMER_GROUP_LOPO_FIXED/
   <project_root>/CACHE_WINDOWS_TRANSFORMER/
